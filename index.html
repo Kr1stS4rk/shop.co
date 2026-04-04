@@ -41,6 +41,7 @@
       <header class="header">
         <div class="container">
           <div class="header__inner">
+            <div class="header__menu flex items-center">
             <button class="menu__btn">
               <span></span>
               <span></span>
@@ -62,9 +63,12 @@
                 <li><a href="" class="nav__link">Brands</a></li>
               </ul>
             </nav>
+            </div>
+        
             <form class="search" action="/search" method="get">
               <button
-                class="search__button icon-size"
+                class="search__button icon-size flex 
+                items-center justify-center"
                 type="submit"
                 aria-label="Search"
               >
@@ -85,7 +89,7 @@
 
               <input
                 type="search"
-                class="search-field"
+                class="search__field"
                 placeholder="Search for products..."
                 id="search-input"
                 aria-label="Search for products..."
@@ -96,7 +100,7 @@
               <a
                 class="header__action-basket icon-size"
                 href="/personal/cart/"
-                title="Корзина"
+                title="Basket"
                 data-testid="CartCounter_empty"
               >
                 <svg
@@ -132,11 +136,14 @@
                 </svg>
               </a>
             </div>
+     
           </div>
         </div>
       </header>
       <main>
-        <section></section>
+        <section>
+          
+        </section>
       </main>
     </div>
     <script src="asserts/template/js/main.js"></script>

@@ -8,11 +8,7 @@
   /* colors */
   /* текста */
   --color-text-primary: #000000; /* основной текст — черный */
-  --color-text-secondary: rgba(
-    0,
-    0,
-    0,
-    0.6
+  --color-text-secondary: rgba(0,0,0,0.6
   ); /* вторичный текст — черный с прозрачностью 60% */
   --color-text-inverse: #ffffff; /* текст на темном фоне — белый */
   /* Фоны */
@@ -171,12 +167,15 @@ main {
 .header {
   position: sticky;
   background: var(--color-bg-light);
-  margin-block: 24px;
+  margin-block: 1.5em;
 }
 .header__inner {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap:0.75rem;
+}
+.header__menu{
+  gap: 16px
 }
 .logo {
   display: block;
@@ -219,13 +218,15 @@ main {
 .search__button {
   font-size: 1.25rem;
 }
-.icon-size{cursor: pointer;}
+.icon-size {
+  cursor: pointer;
+}
 .icon-size svg {
   font-size: inherit;
   width: 1.5rem;
   height: 1.5rem;
 }
-.search-field {
+.search__field {
   display: none;
   border: none;
   background: var(--color-bg-light);
@@ -266,9 +267,6 @@ main {
     margin-left: auto;
     color: var(--color-text-muted-40);
   }
-  .search__button {
-    color: inherit;
-  }
 }
 @media (min-width: 1240px) {
   .container {
@@ -281,16 +279,22 @@ main {
     justify-content: center;
     align-items: center;
   }
+  /* header */
   .logo {
     display: block;
     height: 22px;
   }
+
   .header__inner {
+    gap: 2.5rem;
+  }
+   .header__menu{
     gap: 2.5rem;
   }
   .menu__btn {
     display: none;
   }
+ 
   .header__nav {
     display: block;
   }
@@ -306,8 +310,11 @@ main {
     flex-grow: 1;
     margin-left: 0;
   }
-  .search-field {
+  .search__field {
     display: block;
     font-size: 1em;
+  }
+  .search__button {
+    color: inherit;
   }
 }
