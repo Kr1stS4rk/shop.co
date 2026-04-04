@@ -175,7 +175,7 @@ main {
   gap:0.75rem;
 }
 .header__menu{
-  gap: 16px
+  gap: 1rem;
 }
 .logo {
   display: block;
