@@ -273,7 +273,7 @@ input[type="search"]::-webkit-search-cancel-button {
     color: var(--color-text-muted-40);
   }
   
-  .search__button{display: flex;line-height: 0;}
+  .header__action-search{display: flex;line-height: 0;}
 }
 @media (min-width: 1240px) {
   .container {
@@ -335,7 +335,7 @@ input[type="search"]::-webkit-search-cancel-button {
   .header__actions{
   gap:14px;
 }
-  .search__button {
+  .header__action-search {
     display: none;
   }
   
