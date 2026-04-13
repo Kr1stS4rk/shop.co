@@ -222,8 +222,8 @@ main {
 }
 
 .logo img{
-height:23px;
 width: clamp(144px, 12vw, 160px);
+height: clamp(20px, 2vw, 23px);
 }
 /* Navigation */
 
@@ -409,9 +409,7 @@ box-shadow:
   .container {
     padding-inline: 10px;
   }
-.logo img{
-  height:20px;
-}
+
 
   .top-banner .top-banner__container {
     display: block; /* Возвращаем блочный вид для узких экранов */
@@ -431,6 +429,7 @@ box-shadow:
   .footer__top-about{flex-basis:100%}
   .footer__top-box{flex-basis:50%}
   .footer__heading{
+    font-size:18px;
       margin-bottom:16px;
   }
   .footer__item {gap:20px;}
