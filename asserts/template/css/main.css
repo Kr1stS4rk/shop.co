@@ -61,8 +61,8 @@ img {
 @font-face {
   font-family: "Satoshi Variable";
   src:
-    url("/asserts/template/fonts/Satoshi-Variable.woff2") format("woff2"),
-    url("/asserts/template/fonts/Satoshi-Variable.woff") format("woff");
+    url("../fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("../fonts/Satoshi-Variable.woff") format("woff");
   font-weight: 300 900;
   font-style: normal;
   font-display: swap;
@@ -72,8 +72,8 @@ img {
 @font-face {
   font-family: "Satoshi-VariableItalic";
   src:
-    url("/asserts/template/fonts/Satoshi-VariableItalic.woff2") format("woff2"),
-    url("/asserts/template/fonts/Satoshi-VariableItalic.woff") format("woff");
+    url("../fonts/Satoshi-VariableItalic.woff2") format("woff2"),
+    url("../fonts/Satoshi-VariableItalic.woff") format("woff");
   font-weight: 300 900;
   font-display: swap;
 }
@@ -81,8 +81,8 @@ img {
 @font-face {
   font-family: "Integral CF";
   src:
-    url("/asserts/template/fonts/Integral CF.woff2") format("woff2"),
-    url("/asserts/template/fonts/Integral CF.woff") format("woff");
+    url("../fonts/Integral CF.woff2") format("woff2"),
+    url("../fonts/Integral CF.woff") format("woff");
   font-weight: 100 900; /* диапазон весов, зависит от файла */
   /* только нормальный стиль */
  
