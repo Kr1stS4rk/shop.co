@@ -174,10 +174,6 @@ main {
 .top-banner__text strong{
   font-weight: 400;
 }
-.top-banner__text a:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
 
 .top-banner__close {
   display: block; /* Видна на десктопе */
@@ -186,7 +182,11 @@ main {
   color: var(--color-text-inverse);
   cursor: pointer;
 }
-
+.search__field::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
 /* Header */
 .header {
   position: sticky;
