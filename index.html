@@ -10,9 +10,9 @@
     <!-- 1. Предзагрузка шрифтов -->
     <!-- 2. Шрифты (подключаем рано, так как они критичны для отображения текста) -->
     <!-- 3. Сброс стилей (reset/normalize) -->
-    <link rel="stylesheet" href="asserts/template/css/reset.css">
+    <link rel="stylesheet" href="asserts/template/css/reset.css" />
     <!-- 5. Основные стили проекта -->
-    <link rel="stylesheet" href="asserts/template/css/main.css">
+    <link rel="stylesheet" href="asserts/template/css/main.css" />
   </head>
   <body class="app">
     <div class="top-banner" id="topBanner">
@@ -22,9 +22,9 @@
           <a href="#">Sign Up Now</a>
         </p>
         <button class="top-banner__close">
-           <svg class="icon-close"  width="20" height="20">
-    <use href="./asserts/template/images/sprite.svg#icon-close"></use>
-  </svg>
+          <svg class="icon-close" width="20" height="20">
+            <use href="./asserts/template/images/sprite.svg#icon-close"></use>
+          </svg>
         </button>
       </div>
     </div>
@@ -37,24 +37,28 @@
           <span></span>
         </button>
         <a href="/" class="logo" aria-label="Homepage">
-          
-           <img src="./asserts/template/images/logo.svg" alt="Logo SHOP.CO">
+          <img
+            src="./asserts/template/images/logo.svg"
+            alt="Logo SHOP.CO"
+            width="160"
+            height="22"
+          />
         </a>
-     
+
         <nav class="header__nav">
           <ul class="nav__list" aria-label="Main header">
             <li><a href="" class="nav__link"> Shop</a></li>
             <li>
-              <a href="" class="nav__link">On Sale</a>
+              <a href="#" class="nav__link">On Sale</a>
             </li>
-            <li><a href="" class="nav__link">New Arrivals</a></li>
-            <li><a href="" class="nav__link">Brands</a></li>
+            <li><a href="#" class="nav__link">New Arrivals</a></li>
+            <li><a href="#" class="nav__link">Brands</a></li>
           </ul>
         </nav>
         <form class="search" action="/search" method="get">
- <svg class="search-icon" width="24" height="24" alt="search">
-    <use href="./asserts/template/images/sprite.svg#icon-search"></use>
-  </svg>
+          <svg class="search-icon" width="24" height="24">
+            <use href="./asserts/template/images/sprite.svg#icon-search"></use>
+          </svg>
           <input
             type="search"
             class="search__field"
@@ -62,7 +66,7 @@
             id="search-input"
             aria-label="Search for products..."
             name="q"
-          >
+          />
         </form>
         <div class="header__actions">
           <button
@@ -70,9 +74,11 @@
             type="button"
             aria-label="Search"
           >
-            <svg class="header__action-svg" width="24" height="24" >
-    <use href="./asserts/template/images/sprite.svg#icon-search"></use>
-  </svg>
+            <svg class="header__action-svg" width="24" height="24">
+              <use
+                href="./asserts/template/images/sprite.svg#icon-search"
+              ></use>
+            </svg>
           </button>
           <a
             class="header__action header__action-basket"
@@ -80,153 +86,481 @@
             title="Basket"
             data-testid="CartCounter_empty"
           >
-       
-          <svg class="header__action-svg" width="24" height="24">
-    <use href="./asserts/template/images/sprite.svg#icon-basket"></use>
-  </svg>
+            <svg class="header__action-svg" width="24" height="24">
+              <use
+                href="./asserts/template/images/sprite.svg#icon-basket"
+              ></use>
+            </svg>
           </a>
           <a
             class="header__action header__action-profile"
             href="/profile"
             title="Profile"
-            data-testid="CartCounter_empty">
-      
-           <svg class="header__action-svg" width="24" height="24" >
-    <use href="./asserts/template/images/sprite.svg#icon-profile"></use>
-  </svg>
+            data-testid="CartCounter_empty"
+          >
+            <svg class="header__action-svg" width="24" height="24">
+              <use
+                href="./asserts/template/images/sprite.svg#icon-profile"
+              ></use>
+            </svg>
           </a>
         </div>
       </div>
     </header>
     <main>
-      <section></section>
-    </main>
-<footer class="footer">
-        <div class="container footer__container">
-         <div class="footer__top ">
-          <div class="footer__top-about">
-             <a href="/" class="footer-logo logo" aria-label="Homepage">
-      <img src="./asserts/template/images/logo.svg" alt="Logo SHOP.CO">
-    </a>
-          <p class="footer__top-text">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
-          <ul class="footer__social-list flex items-center">
-            <li class="social-item">
-              <a href="" class="social-link">
-          <svg  width="12" height="10" class="social-icon">
-    <use href="./asserts/template/images/sprite.svg#icon-twitter"></use>
-  </svg>
-              </a>
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__inner">
+            <div class="hero__body flex flex-col space-between">
+              <div class="hero__content flex flex-col">
+                <h1 class="hero__title">
+                  FIND CLOTHES THAT MATCHES YOUR STYLE
+                </h1>
+                <p class="hero__descr">
+                  Browse through our diverse range of meticulously crafted
+                  garments, designed to bring out your individuality and cater
+                  to your sense of style.
+                </p>
+                <a href="/shop" class="hero__btn dark--btn" type="submit">
+                  <span>Shop Now</span></a
+                >
+              </div>
+              <ul class="hero__stats">
+                <li class="hero__stat">
+                  <strong class="hero__stat-number">200+</strong>
+                  <span>International Brands</span>
+                </li>
+                <li class="hero__stat">
+                  <strong class="hero__stat-number">2,000+</strong>
+                  <span>High-Quality Products</span>
+                </li>
+                <li class="hero__stat">
+                  <strong class="hero__stat-number">30,000+</strong>
+                  <span>Happy Customers</span>
+                </li>
+              </ul>
+            </div>
+            <div class="hero__img">
+              <picture>
+                <source
+                  srcset="/asserts/template/images/hero__mobile.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="/asserts/template/images/hero__img.jpg" alt="" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="brands">
+        <div class="container brands__container">
+          <ul class="brands__list">
+            <li class="brands__item">
+              <svg
+                class="brands-icon brands__icon--versace"
+                width="167"
+                height="34"
+              >
+                <use href="./asserts/template/images/sprite.svg#versace"></use>
+              </svg>
             </li>
-            <li class="social-item">
-              <a href="" class="social-link">
-             <svg class="social-icon" width="7" height="13">
-    <use href="./asserts/template/images/sprite.svg#icon-facebook"></use>
-  </svg>
-              </a>
+            <li class="brands__item">
+              <svg
+                class="brands-icon brands__icon--zara"
+                width="91"
+                height="38"
+              >
+                <use href="./asserts/template/images/sprite.svg#zara"></use>
+              </svg>
             </li>
-            <li class="social-item">
-              <a href="" class="social-link">
-   <svg  width="14" height="14" class="social-icon">
-    <use href="./asserts/template/images/sprite.svg#icon-instagram"></use>
-  </svg>
-              </a>
+            <li class="brands__item">
+              <svg
+                class="brands-icon brands__icon--gucci"
+                width="156"
+                height="36"
+              >
+                <use href="./asserts/template/images/sprite.svg#gucci"></use>
+              </svg>
             </li>
-            <li class="social-item">
-              <a href="" class="social-link">
-             <svg class="social-icon" width="13" height="13">
-    <use href="./asserts/template/images/sprite.svg#icon-github"></use>
-  </svg>
-               </a>
+            <li class="brands__item">
+              <svg
+                class="brands-icon brands__icon--prada"
+                width="194"
+                height="32"
+              >
+                <use href="./asserts/template/images/sprite.svg#prada"></use>
+              </svg>
+            </li>
+            <li class="brands__item">
+              <svg
+                class="brands-icon brands__icon--calvin-klein"
+                width="207"
+                height="34"
+                style="color: white"
+              >
+                <use
+                  href="./asserts/template/images/sprite.svg#calvin-klein"
+                ></use>
+              </svg>
             </li>
           </ul>
-       
-          </div>
-       
-            <div class="footer__top-box">
-              <h4 class="footer__heading">Company</h4>
-              <ul class="footer__list" aria-label="company navigation">
-              <li class="footer__item flex flex-col">
-                <a href="" class="footer__nav-link"> About</a>
-                 <a href="" class="footer__nav-link">Features</a>
-                  <a href="" class="footer__nav-link">Works</a>
-                   <a href="" class="footer__nav-link">Career</a>
-              </li>
-            </ul>
-            </div>
-           <div class="footer__top-box">
-              <h4 class="footer__heading">HELP</h4>
-              <ul class="footer__list" aria-label="help navigation">
-              <li class="footer__item flex flex-col">
-                <a href="" class="footer__nav-link"> Customer Support</a>
-                 <a href="" class="footer__nav-link">Delivery Details</a>
-                  <a href="" class="footer__nav-link">Terms & Conditions</a>
-                   <a href="" class="footer__nav-link">Privacy Policy</a>
-              </li>
-            </ul>
-            </div>
-           <div class="footer__top-box">
-              <h4 class="footer__heading">FAQ</h4>
-              <ul class="footer__list" aria-label="FAQ navigation">
-              <li class="footer__item flex flex-col">
-                <a href="" class="footer__nav-link">Account</a>
-                 <a href="" class="footer__nav-link">Manage Deliveries</a>
-                  <a href="" class="footer__nav-link">Orders</a>
-                   <a href="" class="footer__nav-link">Payments</a>
-              </li>
-            </ul>
-            </div>
-        <div class="footer__top-box">
-              <h4 class="footer__heading">Resources</h4>
-              <ul class="footer__list" aria-label="Resources navigation">
-              <li class="footer__item flex flex-col">
-                <a href="" class="footer__nav-link">Free eBooks
+        </div>
+      </section>
+      <section class="products arrivals">
+        <div class="container products__container">
+          <h2 class="products__title">New Arrivals</h2>
+          <ul class="products__list" id="products-list">
+            <li class="products__item">
+              <article
+                class="product__card"
+                data-price="120"
+                data-old-price=""
+                data-discount=""
+              >
+                <a href="" class="product__card-link">
+                  <img
+                    class="product__card-image"
+                    src="./asserts/template/images/arrival-1.jpg"
+                    alt="Vertical Striped Shirt"
+                    width="295"
+                    height="298"
+                  />
                 </a>
-                 <a href="" class="footer__nav-link">Development Tutorial</a>
-                  <a href="" class="footer__nav-link">How to - Blog</a>
-                   <a href="" class="footer__nav-link">Youtube Playlist</a>
+                <div class="product__card-content">
+                  <h3 class="product__card-title">
+                    <a href="#">T-shirt with tape details</a>
+                  </h3>
+                  <div class="product__rating" data-rating="4.5">
+                    <div class="product__stars"></div>
+                    <span class="product__rating-number">
+                      <span class="product__rating-current"></span
+                      ><span class="product__rating-total">/5</span></span
+                    >
+                  </div>
+                  <div class="product__card-price">
+                    <span class="product__price-current"></span>
+                    <del class="product__price-old"></del>
+                    <span class="product__price-discount"></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article
+                class="product__card"
+                data-price="240"
+                data-old-price="260"
+                data-discount="20"
+              >
+                <a href="" class="product__card-link">
+                  <img
+                    class="product__card-image"
+                    src="./asserts/template/images/arrival-2.jpg"
+                    alt="Vertical Striped Shirt"
+                    width="295"
+                    height="298"
+                  />
+                </a>
+                <div class="product__card-content">
+                  <h3 class="product__card-title">
+                    <a href="#">Skinny fit jeans</a>
+                  </h3>
+                  <div class="product__rating" data-rating="5">
+                    <div class="product__stars"></div>
+                    <span class="product__rating-number">
+                      <span class="product__rating-current"></span
+                      ><span class="product__rating-total">/5</span></span
+                    >
+                  </div>
+                  <div class="product__card-price">
+                    <span class="product__price-current"></span>
+                    <del class="product__price-old"></del>
+                    <span class="product__price-discount"></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article
+                class="product__card"
+                data-price="180"
+                data-old-price=""
+                data-discount=""
+              >
+                <a href="" class="product__card-link">
+                  <img
+                    class="product__card-image"
+                    src="./asserts/template/images/arrival-3.jpg"
+                    alt="Vertical Striped Shirt"
+                    width="295"
+                    height="298"
+                  />
+                </a>
+                <div class="product__card-content">
+                  <h3 class="product__card-title">
+                    <a href="#">Checkered shirt</a>
+                  </h3>
+                  <div class="product__rating" data-rating="4.5">
+                    <div class="product__stars"></div>
+                    <span class="product__rating-number">
+                      <span class="product__rating-current"></span
+                      ><span class="product__rating-total">/5</span></span
+                    >
+                  </div>
+                  <div class="product__card-price">
+                    <span class="product__price-current"></span>
+                    <del class="product__price-old"></del>
+                    <span class="product__price-discount"></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+              <li class="products__item">
+              <article
+                class="product__card"
+                data-price="130"
+                data-old-price="160"
+                data-discount="30"
+              >
+                <a href="" class="product__card-link">
+                  <img
+                    class="product__card-image"
+                    src="./asserts/template/images/arrival-4.jpg"
+                    alt="Vertical Striped Shirt"
+                    width="295"
+                    height="298"
+                  />
+                </a>
+                <div class="product__card-content">
+                  <h3 class="product__card-title">
+                    <a href="#">Sleeve Striped T-shirt</a>
+                  </h3>
+                  <div class="product__rating" data-rating="4.5">
+                    <div class="product__stars"></div>
+                    <span class="product__rating-number">
+                      <span class="product__rating-current"></span
+                      ><span class="product__rating-total">/5</span></span
+                    >
+                  </div>
+                  <div class="product__card-price">
+                    <span class="product__price-current"></span>
+                    <del class="product__price-old"></del>
+                    <span class="product__price-discount"></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- <div class="product-card">
+    <div class="product-image"></div>
+
+    <h3 class="product-title">Faded Skinny Jeans</h3>
+
+  <div class="rating" data-rating="5">
+  <div class="stars"></div>
+  <span class="rating-number"></span>
+</div>
+
+<div class="rating" data-rating="4">
+  <div class="stars"></div>
+  <span class="rating-number"></span>
+</div>
+
+<div class="rating" data-rating="3">
+  <div class="stars"></div>
+  <span class="rating-number"></span>
+</div>
+
+<div class="rating" data-rating="4.5">
+  <div class="stars"></div>
+  <span class="rating-number"></span>
+</div>
+  </div> -->
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__top">
+          <div class="footer__top-about">
+            <div class="footer__top-logo">
+              <a href="#" class="footer-logo logo" aria-label="Homepage">
+                <img
+                  src="./asserts/template/images/logo.svg"
+                  alt="Logo SHOP.CO"
+                  width="167"
+                  height="22"
+                />
+              </a>
+              <p class="footer__top-text">
+                We have clothes that suits your style and which you’re proud to
+                wear. From women to men.
+              </p>
+            </div>
+            <ul class="footer__social-list flex items-center">
+              <li class="social-item">
+                <a href="#" class="social-link">
+                  <svg width="12" height="10" class="social-icon">
+                    <use
+                      href="./asserts/template/images/sprite.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="#" class="social-link">
+                  <svg class="social-icon" width="7" height="13">
+                    <use
+                      href="./asserts/template/images/sprite.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-item">
+                <a href="#" class="social-link">
+                  <svg width="14" height="14" class="social-icon">
+                    <use
+                      href="./asserts/template/images/sprite.svg#icon-instagram"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="#" class="social-link">
+                  <svg class="social-icon" width="13" height="13">
+                    <use
+                      href="./asserts/template/images/sprite.svg#icon-github"
+                    ></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-            </div>
-        
-         
-         </div>
-         <div class="footer__bottom">
+          </div>
+
+          <div class="footer__top-box">
+            <h4 class="footer__heading">Company</h4>
+            <ul
+              class="footer__list flex flex-col"
+              aria-label="company navigation"
+            >
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link"> About</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Features</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Works</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Career</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__top-box">
+            <h4 class="footer__heading">HELP</h4>
+            <ul class="footer__list flex flex-col" aria-label="help navigation">
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Customer Support</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Delivery Details</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Terms & Conditions</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__top-box">
+            <h4 class="footer__heading">FAQ</h4>
+            <ul class="footer__list flex flex-col" aria-label="FAQ navigation">
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Account</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Manage Deliveries</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Orders</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Payments</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__top-box">
+            <h4 class="footer__heading">Resources</h4>
+            <ul
+              class="footer__list flex flex-col"
+              aria-label="Resources navigation"
+            >
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Free eBooks</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Development Tutorial</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">How to - Blog</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__nav-link">Youtube Playlist</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
           <p class="footer__legal">
             <small>
-              Shop.co © <time datetime="2000">2000</time>- <time datetime="2023">2023</time>, All Rights Reserved
+              Shop.co © <time datetime="2000">2000</time>-
+              <time datetime="2023">2023</time>, All Rights Reserved
             </small>
           </p>
-<ul class="footer__partners">
-<li class="footer__partners-item">
-      <svg class="social-icon" width="33" height="11" >
-    <use href="./asserts/template/images/sprite.svg#partner-visa"></use>
-  </svg>
-</li>
-<li class="footer__partners-item">
-      <svg class="social-icon" width="26" height="16" >
-    <use href="./asserts/template/images/sprite.svg#partner-mastercard"></use>
-  </svg>
-</li>
-<li class="footer__partners-item">
-      <svg class="social-icon" width="35" height="10" >
-    <use href="./asserts/template/images/sprite.svg#partner-paypal"></use>
-  </svg>
-</li>
-<li class="footer__partners-item">
-      <svg class="social-icon" width="27" height="12" >
-    <use href="./asserts/template/images/sprite.svg#partner-applepay"></use>
-  </svg>
-</li>
-<li class="footer__partners-item">
-      <svg class="social-icon" width="29" height="12">
-    <use href="./asserts/template/images/sprite.svg#partner-googlepay"></use>
-  </svg>
-  
-</li>
-</ul>
-         </div>
+          <ul class="footer__partners">
+            <li class="footer__partners-item">
+              <svg class="social-icon" width="33" height="11">
+                <use
+                  href="./asserts/template/images/sprite.svg#partner-visa"
+                ></use>
+              </svg>
+            </li>
+            <li class="footer__partners-item">
+              <svg class="social-icon" width="26" height="16">
+                <use
+                  href="./asserts/template/images/sprite.svg#partner-mastercard"
+                ></use>
+              </svg>
+            </li>
+            <li class="footer__partners-item">
+              <svg class="social-icon" width="35" height="10">
+                <use
+                  href="./asserts/template/images/sprite.svg#partner-paypal"
+                ></use>
+              </svg>
+            </li>
+            <li class="footer__partners-item">
+              <svg class="social-icon" width="27" height="12">
+                <use
+                  href="./asserts/template/images/sprite.svg#partner-applepay"
+                ></use>
+              </svg>
+            </li>
+            <li class="footer__partners-item">
+              <svg class="social-icon" width="29" height="12">
+                <use
+                  href="./asserts/template/images/sprite.svg#partner-googlepay"
+                ></use>
+              </svg>
+            </li>
+          </ul>
         </div>
-</footer>
+      </div>
+    </footer>
     <script src="asserts/template/js/main.js"></script>
   </body>
 </html>
