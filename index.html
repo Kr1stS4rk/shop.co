@@ -83,8 +83,9 @@
           <a
             class="header__action header__action-basket"
             href="/personal/cart/"
-            title="Basket"
+            aria-label="Basket"
             data-testid="CartCounter_empty"
+            data-tooltip="Basket"
           >
             <svg class="header__action-svg" width="24" height="24">
               <use
@@ -95,8 +96,9 @@
           <a
             class="header__action header__action-profile"
             href="/profile"
-            title="Profile"
+            aria-label="Profile"
             data-testid="CartCounter_empty"
+            data-tooltip="Profile"
           >
             <svg class="header__action-svg" width="24" height="24">
               <use
@@ -208,7 +210,7 @@
       </section>
       <section class="products arrivals">
         <div class="container products__container">
-          <h2 class="products__title">New Arrivals</h2>
+          <h2 class="products__title section__title">New Arrivals</h2>
           <ul class="products__list" id="products-list">
             <li class="products__item">
               <article
@@ -228,7 +230,7 @@
                 </a>
                 <div class="product__card-content">
                   <h3 class="product__card-title">
-                    <a href="#">T-shirt with tape details</a>
+                    <a href="#">T-shirt with Tape Details</a>
                   </h3>
                   <div class="product__rating" data-rating="4.5">
                     <div class="product__stars"></div>
@@ -263,9 +265,9 @@
                 </a>
                 <div class="product__card-content">
                   <h3 class="product__card-title">
-                    <a href="#">Skinny fit jeans</a>
+                    <a href="#">Skinny Fit Jeans</a>
                   </h3>
-                  <div class="product__rating" data-rating="5">
+                  <div class="product__rating" data-rating="3.5">
                     <div class="product__stars"></div>
                     <span class="product__rating-number">
                       <span class="product__rating-current"></span
@@ -298,7 +300,7 @@
                 </a>
                 <div class="product__card-content">
                   <h3 class="product__card-title">
-                    <a href="#">Checkered shirt</a>
+                    <a href="#">Checkered Shirt</a>
                   </h3>
                   <div class="product__rating" data-rating="4.5">
                     <div class="product__stars"></div>
@@ -315,7 +317,7 @@
                 </div>
               </article>
             </li>
-              <li class="products__item">
+            <li class="products__item">
               <article
                 class="product__card"
                 data-price="130"
@@ -351,34 +353,204 @@
               </article>
             </li>
           </ul>
+          <a
+            href="/new-arrivals"
+            class="products__btn light--btn"
+            type="submit"
+          >
+            <span>View All</span></a
+          >
         </div>
       </section>
+      <!-- selling -->
+      <section class="products selling">
+        <div class="container products__container">
+          <h2 class="products__title section__title">Top Selling</h2>
+          <ul class="products__list" id="products-list">
+            <li class="products__item">
+              <article
+                class="product__card"
+                data-price="212"
+                data-old-price="235"
+                data-discount="20"
+              >
+                <a href="" class="product__card-link">
+                  <img
+                    class="product__card-image"
+                    src="./asserts/template/images/selling-1.jpg"
+                    alt="Vertical Striped Shirt"
+                    width="295"
+                    height="298"
+                  />
+                </a>
+                <div class="product__card-content">
+                  <h3 class="product__card-title">
+                    <a href="#">Vertical Striped Shirt</a>
+                  </h3>
+                  <div class="product__rating" data-rating="5">
+                    <div class="product__stars"></div>
+                    <span class="product__rating-number">
+                      <span class="product__rating-current"></span
+                      ><span class="product__rating-total">/5</span></span
+                    >
+                  </div>
+                  <div class="product__card-price">
+                    <span class="product__price-current"></span>
+                    <del class="product__price-old"></del>
+                    <span class="product__price-discount"></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article
+                class="product__card"
+                data-price="145"
+                data-old-price=""
+                data-discount=""
+              >
+                <a href="" class="product__card-link">
+                  <img
+                    class="product__card-image"
+                    src="./asserts/template/images/selling-2.jpg"
+                    alt="Vertical Striped Shirt"
+                    width="295"
+                    height="298"
+                  />
+                </a>
+                <div class="product__card-content">
+                  <h3 class="product__card-title">
+                    <a href="#">Courage Graphic T-shirt</a>
+                  </h3>
+                  <div class="product__rating" data-rating="4">
+                    <div class="product__stars"></div>
+                    <span class="product__rating-number">
+                      <span class="product__rating-current"></span
+                      ><span class="product__rating-total">/5</span></span
+                    >
+                  </div>
+                  <div class="product__card-price">
+                    <span class="product__price-current"></span>
+                    <del class="product__price-old"></del>
+                    <span class="product__price-discount"></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article
+                class="product__card"
+                data-price="80"
+                data-old-price=""
+                data-discount=""
+              >
+                <a href="" class="product__card-link">
+                  <img
+                    class="product__card-image"
+                    src="./asserts/template/images/selling-3.jpg"
+                    alt="Vertical Striped Shirt"
+                    width="295"
+                    height="298"
+                  />
+                </a>
+                <div class="product__card-content">
+                  <h3 class="product__card-title">
+                    <a href="#">Loose Fit Bermuda Shorts</a>
+                  </h3>
+                  <div class="product__rating" data-rating="3">
+                    <div class="product__stars"></div>
+                    <span class="product__rating-number">
+                      <span class="product__rating-current"></span
+                      ><span class="product__rating-total">/5</span></span
+                    >
+                  </div>
+                  <div class="product__card-price">
+                    <span class="product__price-current"></span>
+                    <del class="product__price-old"></del>
+                    <span class="product__price-discount"></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article
+                class="product__card"
+                data-price="210"
+                data-old-price=""
+                data-discount=""
+              >
+                <a href="" class="product__card-link">
+                  <img
+                    class="product__card-image"
+                    src="./asserts/template/images/selling-4.jpg"
+                    alt="Vertical Striped Shirt"
+                    width="295"
+                    height="298"
+                  />
+                </a>
+                <div class="product__card-content">
+                  <h3 class="product__card-title">
+                    <a href="#">Faded Skinny Jeans</a>
+                  </h3>
+                  <div class="product__rating" data-rating="4.5">
+                    <div class="product__stars"></div>
+                    <span class="product__rating-number">
+                      <span class="product__rating-current"></span
+                      ><span class="product__rating-total">/5</span></span
+                    >
+                  </div>
+                  <div class="product__card-price">
+                    <span class="product__price-current"></span>
+                    <del class="product__price-old"></del>
+                    <span class="product__price-discount"></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <a
+            href="/new-arrivals"
+            class="products__btn light--btn"
+            type="submit"
+          >
+            <span>View All</span></a
+          >
+        </div>
+      </section>
+      <section class="dress-style">
+        <div class="container dress-style__container">
+          <h2 class="dress-style__title section__title">
+            BROWSE BY DRESS STYLE
+          </h2>
+          <ul class="dress-style__list">
+  <li class="dress-style__item casual">
+    <a href="#" class="dress-style__link">
+    <h4 class="dress-style__label">Casual</h4>
+    <img src="./asserts/template/images/dress-style_1.jpg" width="407" height="289" alt="Casual style">
+ </a>
+  </li>
+  <li class="dress-style__item formal">
+    <a href="#" class="dress-style__link">
+      <h4 class="dress-style__label">Formal</h4>
+      <img src="./asserts/template/images/dress-style_2.jpg" width="684" height="289" alt="Formal style">
+    </a>
+  </li>
+  <li class="dress-style__item party">
+    <a href="#" class="dress-style__link">
+      <h4 class="dress-style__label">Party</h4>
+      <img src="./asserts/template/images/dress-style_3.jpg" width="684" height="289"  alt="Party style">
+    </a>
+  </li>
+  <li class="dress-style__item gym">
+    <a href="#" class="dress-style__link">
+      <h4 class="dress-style__label">Gym</h4>
+      <img src="./asserts/template/images/dress-style_4.jpg" width="407" height="289" alt="Gym style">
+    </a>
+  </li>
+</ul>
 
-      <!-- <div class="product-card">
-    <div class="product-image"></div>
-
-    <h3 class="product-title">Faded Skinny Jeans</h3>
-
-  <div class="rating" data-rating="5">
-  <div class="stars"></div>
-  <span class="rating-number"></span>
-</div>
-
-<div class="rating" data-rating="4">
-  <div class="stars"></div>
-  <span class="rating-number"></span>
-</div>
-
-<div class="rating" data-rating="3">
-  <div class="stars"></div>
-  <span class="rating-number"></span>
-</div>
-
-<div class="rating" data-rating="4.5">
-  <div class="stars"></div>
-  <span class="rating-number"></span>
-</div>
-  </div> -->
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container footer__container">

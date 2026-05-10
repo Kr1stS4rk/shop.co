@@ -11,19 +11,23 @@ ratingBlocks.forEach(function (ratingBlock) {
   const starsContainer = ratingBlock.querySelector(".product__stars");
   const ratingCurrent = ratingBlock.querySelector(".product__rating-current");
 
-  for (let i = 1; i <= 5; i++) {
+  starsContainer.innerHTML = "";
+
+  const fullStars = Math.floor(ratingValue);
+  const hasPartialStar = ratingValue % 1 !== 0;
+  const totalVisibleStars = fullStars + (hasPartialStar ? 1 : 0);
+
+  for (let i = 1; i <= totalVisibleStars; i++) {
     const star = document.createElement("span");
     star.classList.add("star");
 
     const starFill = document.createElement("span");
     starFill.classList.add("star-fill");
 
-    if (ratingValue >= i) {
+    if (i <= fullStars) {
       starFill.style.width = "100%";
-    } else if (ratingValue > i - 1) {
-      starFill.style.width = (ratingValue - (i - 1)) * 100 + "%";
     } else {
-      starFill.style.width = "0%";
+      starFill.style.width = (ratingValue - fullStars) * 100 + "%";
     }
 
     star.appendChild(starFill);
@@ -32,7 +36,9 @@ ratingBlocks.forEach(function (ratingBlock) {
 
   ratingCurrent.textContent = ratingValue.toFixed(1);
 });
-    const productCards = document.querySelectorAll(".product__card");
+
+
+const productCards = document.querySelectorAll(".product__card");
 
 productCards.forEach(function (card) {
   const price = card.dataset.price;
