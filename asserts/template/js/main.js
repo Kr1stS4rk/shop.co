@@ -4,12 +4,14 @@ const closeBtn = topBanner.querySelector('.top-banner__close');
 closeBtn.addEventListener('click', () => {
   topBanner.classList.add('top-banner--hidden');
 });
-const ratingBlocks = document.querySelectorAll(".product__rating");
+const ratingBlocks = document.querySelectorAll(".product__rating, .review__rating");
 
 ratingBlocks.forEach(function (ratingBlock) {
   const ratingValue = Number(ratingBlock.dataset.rating);
   const starsContainer = ratingBlock.querySelector(".product__stars");
   const ratingCurrent = ratingBlock.querySelector(".product__rating-current");
+
+  if (!starsContainer) return;
 
   starsContainer.innerHTML = "";
 
@@ -34,9 +36,10 @@ ratingBlocks.forEach(function (ratingBlock) {
     starsContainer.appendChild(star);
   }
 
-  ratingCurrent.textContent = ratingValue.toFixed(1);
+  if (ratingCurrent) {
+    ratingCurrent.textContent = ratingValue.toFixed(1);
+  }
 });
-
 
 const productCards = document.querySelectorAll(".product__card");
 
@@ -64,4 +67,81 @@ productCards.forEach(function (card) {
   } else {
     discountElement.remove();
   }
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.querySelector('.reviews__sliders');
+  const prevBtn = document.querySelector('.reviews__arrow-prev');
+  const nextBtn = document.querySelector('.reviews__arrow-next');
+
+  // Получаем ширину одной карточки + gap
+  const slide = slider.querySelector('.review__slider');
+  let gap = parseInt(getComputedStyle(slider).gap) || 0;
+  let slideWidth = slide.offsetWidth + gap;
+
+  // ==== Кнопки ====
+  nextBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+  });
+
+  // ==== Drag / Swipe ====
+  let isDown = false;
+  let startX;
+  let scrollLeftDrag;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeftDrag = slider.scrollLeft;
+    slider.classList.add('active');
+  });
+
+  slider.addEventListener('mouseleave', () => { isDown = false; slider.classList.remove('active'); });
+  slider.addEventListener('mouseup', () => { 
+    isDown = false; 
+    slider.classList.remove('active'); 
+    snapToSlide();
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = startX - x;
+    slider.scrollLeft = scrollLeftDrag + walk;
+  });
+
+  slider.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeftDrag = slider.scrollLeft;
+  });
+
+  slider.addEventListener('touchend', () => { 
+    isDown = false; 
+    snapToSlide();
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    if(!isDown) return;
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = startX - x;
+    slider.scrollLeft = scrollLeftDrag + walk;
+  });
+
+  // ==== Функция «прилипание» к ближайшей карточке ====
+  function snapToSlide() {
+    const scroll = slider.scrollLeft;
+    const index = Math.round(scroll / slideWidth);
+    slider.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
+  }
+
+  // ==== Обновление slideWidth при ресайзе ====
+  window.addEventListener('resize', () => {
+    const gapNew = parseInt(getComputedStyle(slider).gap) || 0;
+    slideWidth = slider.querySelector('.review__slider').offsetWidth + gapNew;
+  });
 });
